@@ -16,9 +16,10 @@
 </head>
 <body></body>
 <script>
+// プログラムはここから
 
-ここにプログラムを書きます。
 
+// ここまでの間に書きます。
 </script>
 </html>
 ```
@@ -31,12 +32,21 @@
 
 ブラウザに表示させる方法は色々ありますが、手軽く表示させる方法として、以下を紹介します。
 
+以下の内容を「プログラムはここから」の下に書いたのち、「sample.html」をブラウザで実行してみてください。
+
 ```javascript
 
 
 document.body.innerText = "Hello JavaScript";
 
 ```
+
+ブラウザに「Hello JavaScript」と表示されていれば成功です。
+
+続けて、「Hello JavaScript」の内容を自分なりに変えてみて、ブラウザのリロード（F5キー、もしくはブラウザの更新ボタン）を行って見てください。
+
+書き換えた内容で、ブラウザ上の表示が
+
 
 ### アラートを表示してみる。
 
@@ -57,6 +67,9 @@ alert("hello JavaScript");
 
 console.log("Hello JavaScript");
 
+// カンマ区切りで渡すことも可能です。
+console.log("Hello", "JavaScript");
+
 ```
 
 コンソールの表示方法はブラウザによって様々です。
@@ -68,7 +81,7 @@ console.log("Hello JavaScript");
 | IE | ``F12`` |
 
 
-## プログラムの流れ型
+## プログラムの流れ
 
 javascriptは手続き型の言語です、プログラムは基本的に上から下に向かい、1行づつ処理されていきます。
 
