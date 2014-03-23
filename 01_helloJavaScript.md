@@ -25,33 +25,46 @@
 
 ## プログラム書いて結果を表示させる。
 
+まず、簡単なプログラムとして、「hello JavaScript」を様々な方法で表示してみましょう。
 
 ### ブラウザに表示してみる。
 
+ブラウザに表示させる方法は色々ありますが、手軽く表示させる方法として、以下を紹介します。
+
 ```javascript
-document.body.innerText = 'Hello HTML JavaScript';
+
+
+document.body.innerText = 'Hello JavaScript';
+
 ```
 
 ### アラートを表示してみる。
 
+これはalertダイアログというポップアップで表示させる方法です。
+
+
 ```javascript
-alart('hello Alart JavaScript');
+
+
+alert('hello JavaScript');
+
 ```
 
 ### コンソールログに表示してみる。
 
 ```javascript
-console.log('Hello Console JavaScript');
+
+
+console.log('Hello JavaScript');
+
 ```
 
-コンソールの表示方法
+コンソールの表示方法はブラウザによって様々です。
 
- + FireFox
-	+ ショートカット：Ctrl + Shift + i
- + Chorme
-	+ ショートカット：Ctrl + Shift + i
- + IE
- 	+ ショートカット：F12
-
+| ブラウザ | ショートカットキー |
+|:---|:---|
+| FireFox | ``Ctrl`` + ``Shift`` + ``i`` |
+| Chorme | ``Ctrl`` + ``Shift`` + ``i`` |
+| IE | ``F12`` |
 
 
