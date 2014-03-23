@@ -34,7 +34,7 @@
 ```javascript
 
 
-document.body.innerText = 'Hello JavaScript';
+document.body.innerText = "Hello JavaScript";
 
 ```
 
@@ -46,7 +46,7 @@ document.body.innerText = 'Hello JavaScript';
 ```javascript
 
 
-alert('hello JavaScript');
+alert("hello JavaScript");
 
 ```
 
@@ -55,7 +55,7 @@ alert('hello JavaScript');
 ```javascript
 
 
-console.log('Hello JavaScript');
+console.log("Hello JavaScript");
 
 ```
 
@@ -66,5 +66,40 @@ console.log('Hello JavaScript');
 | FireFox | ``Ctrl`` + ``Shift`` + ``i`` |
 | Chorme | ``Ctrl`` + ``Shift`` + ``i`` |
 | IE | ``F12`` |
+
+
+## コメントの書き方。
+
+プログラムにはメモや後で見た人がわかりやすいよう、コメントを残すことが出来ます。
+
+コメントはプログラムの動作に影響を与えません。
+
+動かしたくないけれども、せっかく書いたものを消したく無い場合等にも使えます。
+
+#### 1行コメント
+
+```javascript
+
+
+// これは「hello world」とコンソールに出力します。
+console.log("hello world");
+
+
+```
+
+#### 複数行に渡るコメントを書く場合。
+
+```javascript 
+
+
+/*
+これは
+hello world
+とコンソールに出力します。
+*/
+console.log("hello world");
+
+```
+
 
 
