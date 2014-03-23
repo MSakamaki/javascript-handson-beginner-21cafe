@@ -108,7 +108,7 @@ document.body.innerText
 
 ```
 
-### 配列とObject
+## 配列とObject
 
 オブジェクトや配列はいろいろな情報（変数）を、一つの変数として管理できるものです。
 
@@ -217,7 +217,17 @@ Objectの操作を行う様々な方法を以下に記します。
 var obj = { A: "エー", B:"ビー", C:"シー" };
 
 // Objectに値を追加
+obj.D = "ディー";
+obj['E'] = "イー";
 
+// Object.Bの値を書き換える
+obj.B = "ベー";
+
+// Object.Cの値を削除する。
+delete obj.C;
+
+// 表示すると・・・？
+console.log(obj);
 
 ```
 
