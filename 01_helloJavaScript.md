@@ -3,40 +3,45 @@
 
 ## プログラムの書き方
 
-### エディター
+### はじめの一歩
 
- 1. 新しく空のファイル「sample.html」を作成する。
- 1. テキストエディターにプログラムを書く
+ 1. 新しく空のファイル「sample.html」を作成します。
+ 1. テキストエディターで「sample.html」を開き、以下のプログラムを書きます。
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 </head>
 <body></body>
-<javascript>
+<script>
 
-ここにプログラムを書く
+ここにプログラムを書きます。
 
-</javascript>
+</script>
 </html>
 ```
-
-
-
 
 ## プログラム書いて結果を表示させる。
 
 
 ### ブラウザに表示してみる。
 
+```javascript
+document.body.innerText = 'Hello HTML JavaScript';
+```
 
+### アラートを表示してみる。
 
+```javascript
+alart('hello Alart JavaScript');
+```
 
-### 
+### コンソールログに表示してみる。
 
-### 
-
+```javascript
+console.log('Hello Console JavaScript');
+```
 
 
