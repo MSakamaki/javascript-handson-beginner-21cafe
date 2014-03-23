@@ -44,4 +44,14 @@ alart('hello Alart JavaScript');
 console.log('Hello Console JavaScript');
 ```
 
+コンソールの表示方法
+
+ + FireFox
+	+ ショートカット：Ctrl + Shift + i
+ + Chorme
+	+ ショートカット：Ctrl + Shift + i
+ + IE
+ 	+ ショートカット：F12
+
+
 
