@@ -5,11 +5,60 @@
 ### 変数の書き方
 
 ```javascript
+
+
 var [変数名] = [情報];
+
 ```
 
  + 変数は「情報を格納する箱」です。
  + 変数名は「箱を一意に特定する為の名前」です。
+
+変数は「宣言」と「代入」を行うことにより、情報を持つことができます。
+
+```javascript
+
+
+// 変数iを宣言
+var i;
+
+// 変数iに100を代入する。
+i = 100;
+
+// 次のように宣言と代入を一度に行うこともできます。
+var x = 200;
+
+```
+
+### 変数の中身を見る
+
+変数の中身を表示してみましょう。
+
+以下のケースは``console.log()``、``alert()``、``document.body.innerText``を使って変数の中身を表示しています。
+
+#### 例
+
+```javascript
+
+
+// メッセージ「hello world !」が入っている変数「message」を作る。
+var message = "hello world !";
+
+// ブラウザ上に表示する。
+document.body.innerText = message;
+
+// アラートに表示する。
+alert(message);
+
+// コンソール上に表示する。
+console.log(message);
+
+```
+
+### リテラル
+
+
+
 
 ### javascript変数の種類
 
@@ -28,35 +77,21 @@ var [変数名] = [情報];
 | 型 | 変数iに値を格納する場合 | 何のために使う？ |
 |:---|:---|:---|
 | 数値(Integer) | ``var i = 100;`` | 数値を扱う、計算などが目的 |
-| 文字列(String) | ``var i = "hello";`` もしくは ``var i = 'hello';`` | 文字を扱う |
-| 論理型(Boolean) | ``var i = true;`` | 判定をしたいときに |
+| 文字列(String) | ``var i = "hello";`` | 文字を扱う |
+| 論理型(Boolean) | ``var i = true;`` | デジタルな考えをしたいときに |
 | 配列(Array) | ``var i = [];`` | 連続した情報の塊を持ちたいとき |
 | オブジェクト(Object) | ``var i = {};`` | キーにデータを関連付けて保存したいとき |
 | null | ``var i = null;`` | 値が無いオブジェクトを示す |
 | undefined | ``var i = undefined;`` | まだ値が代入されていないことを示す |
 
 
-### 変数の中身を見る
 
-変数の中身を表示してみましょう。  
-以下のケースは``console.log()``、``alert()``、``document.body.innerText``を使いって変数の中身をそれぞれ表示しています。
-
-#### 例
-
-```javascript
-// メッセージ「hello world !」が入っている変数「message」を作る。
-var message = "hello world !";
-
-// ブラウザ上に表示する。
-document.body.innerText = message;
-// アラートに表示する。
-alert(message);
-// コンソール上に表示する。
-console.log(message);
-
-```
 
 ### 変数同士の組み合わせ
+
+``+``を使うと、変数と変数を組み合わせ、新たな結果を作ることができます。
+
+その時、どのような型同士を使ったかにより、様々な結果が帰ります。
 
 #### 数値 + 数値
 
@@ -72,7 +107,7 @@ console.log( 100 + 200 );
 ```javascript
 
 
-console.log( "hello" + "world" );
+console.log( "100" + "200" );
 
 ```
 
@@ -80,31 +115,34 @@ console.log( "hello" + "world" );
 
 ```javascript
 
+// 文字列 ＋ 数値
+console.log( "100" + 200 );
 
-console.log( "hello" + 100);
+// 数値 ＋ 文字列
+console.log( 100 + "200" )
 
 ```
 
-### 変数の必要性
+### 変数を使ってみる。
 
-変数に格納しておく事で、繰り返し出現する要素を一元管理できる。
+変数に格納しておく事で、繰り返し出現する要素を一元管理できます。
 
 ```javascript
-
 
 var height = 100;
 var width = 50;
 var length = 80;
 
+// 計算を行います。
+var answer = height * width * length;
+
 document.body.innerText
  = "立方体の面積は高さ×幅×奥行きで求めます。"
- + " 高さは" + height
- + " 幅は" + width
- + " 奥行きは" + length
- + " 計算式は" + height + "×" + width + "*" + length + "で、結果は"
- + (height * width *  length)
- + "です。";
-
+ + "高さは" + height
+ + "、幅は" + width
+ + "、奥行きは" + length
+ + "、計算式は" + height + "×" + width + "*" + length + "で、結果は"
+ + answer + "です。";
 
 ```
 
@@ -231,6 +269,10 @@ console.log(obj);
 
 ```
 
+### null と undefined
 
 
+```
+
+```
 

@@ -68,6 +68,20 @@ console.log("Hello JavaScript");
 | IE | ``F12`` |
 
 
+## プログラムの流れ型
+
+javascriptは手続き型の言語です、プログラムは基本的に上から下に向かい、1行づつ処理されていきます。
+
+```javascript
+
+
+console.log("こんにちは");
+console.log("私は");
+console.log("JavaScript");
+console.log("はじめました。");
+
+```
+
 ## コメントの書き方。
 
 プログラムにはメモや後で見た人がわかりやすいよう、コメントを残すことが出来ます。
