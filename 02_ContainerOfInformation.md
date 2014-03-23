@@ -110,6 +110,10 @@ document.body.innerText
 
 ### 配列とObject
 
+オブジェクトや配列はいろいろな情報（変数）を、一つの変数として管理できるものです。
+
+変数が箱だとすると、配列やObjectはタンスのようなものと考えましょう。
+
 #### 配列
 
 配列は、連続した変数の塊です。
@@ -136,7 +140,7 @@ console.log(ary);
 
 ```
 
-配列に格納されている特定の値だけを見たい場合は次のように書きます。
+配列に格納されている特定の値だけを見たい場合は、次のように``変数名[見たい位置]``のように書きます。
 
 ```javascript
 
@@ -176,6 +180,7 @@ Objectはキーと値を対に持つ変数の塊です。
 
 ```javascript
 
+
 var obj = { A: "エー", B:"ビー", C:"シー" };
 
 ```
@@ -186,6 +191,7 @@ var obj = { A: "エー", B:"ビー", C:"シー" };
 
 ```javascript
 
+
 console.log(obj);
 
 ```
@@ -195,7 +201,7 @@ console.log(obj);
 
 ```javascript
 
-//Objectの中身を見る方法
+
 console.log(obj.A);
 
 console.log(obj['B']);
@@ -203,6 +209,17 @@ console.log(obj['B']);
 
 ```
 
+Objectの操作を行う様々な方法を以下に記します。
+
+```javascript
+
+
+var obj = { A: "エー", B:"ビー", C:"シー" };
+
+// Objectに値を追加
+
+
+```
 
 
 
