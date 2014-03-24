@@ -228,7 +228,7 @@ if (0) {
 | String | ``""``(空文字) |
 | Integer | ``0`` |
 | null | ``null`` |
-| undifeind | ``undifeind`` |
+| undefined | ``undefined`` |
 
 
 ## 繰り返し
