@@ -153,7 +153,7 @@ console.log("iとxはiの方が小さい？", i <= x);
 ```javascript
 
 // 変数iを色々書き換えてみる。
-var i = "hello";
+var i = window.prompt("文字を入力してください");
 
 // 変数iの値がhelloか？
 if (i == "hello") {
@@ -184,13 +184,13 @@ else
 
 var i = window.prompt("数値を入れてください。");
 switch(i){
-  case 1:
+  case "1":
     console.log("入力値が１の場合");
     break;
-  case 2:
+  case "2":
     console.log("入力値が２の場合");
     break;
-  case 3:
+  case "3":
     console.log("入力値が３の場合");
     break;
   default:
