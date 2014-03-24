@@ -295,6 +295,7 @@ for ( var i = 0 ; i < 10 ; i++ ){
 
 ```javascript
 
+
 for ( var i = 0 ; i < 10 ; i++ ){
 	console.log(i, "回目のループ");
 
@@ -309,6 +310,23 @@ console.log("ループ終了しました");
 
 
 ### continue
+
+こちらは、ある特定条件下でループの次の処理へ移りたい場合に使います。
+
+```javascript
+
+
+for ( var i = 0 ; i < 10 ; i++ ){
+
+	if ( (i % 3) == 0 ) {
+		console.log("iが3の倍のときは、処理をスキップします。");
+		continue;
+	}
+	console.log(i, "回目のループ");
+}
+console.log("ループ終了しました");
+
+```
 
 
 #### 繰り返し処理で使う代表的なもの
