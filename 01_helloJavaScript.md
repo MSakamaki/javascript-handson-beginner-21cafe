@@ -87,10 +87,9 @@ console.log("Hello", "JavaScript");
 
 | ブラウザ | ショートカットキー |
 |:---|:---|
-| FireFox | ``Ctrl`` + ``Shift`` + ``i`` |
-| Chorme | ``Ctrl`` + ``Shift`` + ``i`` |
+| FireFox | ``Ctrl``+``Shift`` + ``i``(Macの場合``command``+``Option``+``k``) |
+| Chorme | ``Ctrl``+``Shift``+``i``(Macの場合``command``+``Option``+``i``) |
 | IE | ``F12`` |
-
 
 ### 入力してみる
 
