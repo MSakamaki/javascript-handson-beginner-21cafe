@@ -48,13 +48,17 @@ function plus(x, y) {
 ```javascript
 
 
-var plus(10, 20);
+console.log("plus()の結果は", plus(10, 20));
 
 ```
 
+#### サンプル問題
 
-## Objectと配列と関数と
++ 
 
+
+
+### サンプル問題
 
 ```html
 
