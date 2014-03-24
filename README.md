@@ -6,7 +6,7 @@
  1. [Hello JavaScript](https://github.com/MSakamaki/javascript-handson-beginner-21cafe/blob/master/01_helloJavaScript.md)
  1. [情報の入れ物を作る（変数）](https://github.com/MSakamaki/javascript-handson-beginner-21cafe/blob/master/02_ContainerOfInformation.md)
  1. [処理の流れを作る（手続き）](https://github.com/MSakamaki/javascript-handson-beginner-21cafe/blob/master/03_ControllObject.md)
- 1. 処理の入れ物を作る（関数）
+ 1. [処理の入れ物を作る（関数）](https://github.com/MSakamaki/javascript-handson-beginner-21cafe/blob/master/04_function.md)
 
 ### 参考文献
 
