@@ -146,6 +146,7 @@ console.log( 100 + "200" )
 
 ```javascript
 
+
 var height = 100;
 var width = 50;
 var length = 80;
@@ -198,6 +199,7 @@ console.log(ary);
 配列に格納されている特定の値だけを見たい場合は、次のように``変数名[見たい位置]``のように書きます。
 
 ```javascript
+
 
 console.log("配列の1番目は", ary[0]);
 console.log("配列の2番目は", ary[1]);
