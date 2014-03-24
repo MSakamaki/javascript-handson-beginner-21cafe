@@ -179,18 +179,50 @@ else
 
 値にはそれだけでtrue/falseの判定として使えるものもあります。
 
+```javascript
 
 
+// これは true/false ?
+if (0) {
+	console.log("True?");
+} else {
+	console.log("False?");
+}
+
+```
+
+#### falseになるデータ一覧
+
+以下の値は
+
+| 型 | 値 |
+|:--|:--|
+| String | ``""``(空文字) |
+| Integer | ``0`` |
+| Boolean | ``false`` |
+| null | ``null`` |
+| undifeind | ``undifeind`` |
 
 ## 繰り返し
 
+処理を繰り返して処理します。
 
+```javascript
+
+
+vvar i = 0;
+// 変数iが１０より小さい間、処理を繰り返す。
+while( i < 10 ) {
+	console.log(++i, "回目のループ");
+}
+
+```
 
 
 
 ## まとめ
 
  + プログラムは変数と変数を演算子で組み合わせ、様々な結果を作り出す。
- + 
+ + 処理を分岐させるにはif文を使って判定で
  + 
  + 
