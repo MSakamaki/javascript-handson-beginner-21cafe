@@ -59,31 +59,50 @@ console.log(message);
 
 javascriptには様々なデータの種類があります。
 
-### javascript変数の種類
+### javascript型
 
  + 数値
  + 文字列
  + 論理型
- + 配列
  + オブジェクト
  + null / undefined
 
-<small>その他にも日付、正規表現、Error、JSONなどありますが今回は割愛します。</small>
-
 ### 書き方
 
-javascriptは、その様々な値の型を自動的に判定しています。
+javascriptは、様々な値の型を、自動的に判定しています。
 
 | 型 | 変数iに値を格納する場合 | 何のために使う？ |
 |:---|:---|:---|
 | 数値(Integer) | ``var i = 100;`` | 数値を扱う、計算などが目的 |
 | 文字列(String) | ``var i = "hello";`` | 文字を扱う |
 | 論理型(Boolean) | ``var i = true;`` | デジタルな考えをしたいときに |
-| 配列(Array) | ``var i = [];`` | 連続した情報の塊を持ちたいとき |
 | オブジェクト(Object) | ``var i = {};`` | キーにデータを関連付けて保存したいとき |
+| 配列(Array) | ``var i = [];`` | 連続した情報の塊を持ちたいとき |
 | null | ``var i = null;`` | 値が無いオブジェクトを示す |
 | undefined | ``var i = undefined;`` | まだ値が代入されていないことを示す |
 
+### 変数の型を検知する。
+
+変数の値がどんな型かをみるには、``typeof``や``instanceof``を使います
+
+しかし、この機能は複雑なので今回は飛ばします。
+
+```javascript 
+
+
+// プリミティブ型の判定
+var tmp = "hello javascript";
+
+console.log(typeof tmp);
+console.log( tmp instanceof String );
+
+// オブジェクト型の判定
+var ntmp = new String("hello new JavaScript");
+
+console.log(typeof ntmp);
+console.log( ntmp instanceof String );
+
+```
 
 ### 変数同士の組み合わせ
 
