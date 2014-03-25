@@ -155,8 +155,8 @@ console.log(hoge());
 
 ### サンプル問題
 
- + Ｃａｎｖａｓで ■ を操作するプログラム。
- + 
+ + Ｃａｎｖａｓで ■ が自動的に動くプログラムです。
+ + それぞれ用意した関数と変数を書き換えながら、■を動かしてみましょう。
  + 
 
 ```html
@@ -178,7 +178,7 @@ var x = 10,
     y = 10,
     w = 10,
     h = 10,
-    speed = 500;
+    speed = 100;
 
 function fn_x(){
 	return x++;
@@ -208,6 +208,68 @@ viewCanvas();
 
 ```
 
+#### へんてこ動作のサンプル
+
+##### 計算、Math関数を用いたＹ座標
+
+```javascript
+function linear(x) {
+    return x / 2;
+}
+
+function sin(x) {
+    return Math.sin(x) * 300; // 0.0 - 1.0が返ってくるので倍率ドン
+}
+
+function tan(x) {
+    return Math.tan(x) * 300; // 0.0 - 1.0が返ってくるので倍率ドン
+}
+```
+
+このように書き換える。
+
+```javascript
+function fn_y(){
+	return linear(x);
+}
+```
+
+##### Ｕターンをしてみる。
+
+```javascript
+function fn_x(){
+	if (y >= 120 ) {
+		return x--;
+	}else if ( x >= 120 ) {
+		return x;
+	}
+	return x++;
+}
+function fn_y(){
+	if ( y >= 120 ) {
+		return y;
+	} else if ( x >= 120 ) {
+		return y++;
+	}
+	return y;
+}
+```
+##### マウスの追跡
+
+traceX()と、traceY()をfn_x(), fn_y(), x, yそれぞれと置き換えてみる。
+
+```javascript
+var mouseX = 0,
+    mouseY = 0;
+function traceX() {
+    return mouseX;
+}
+function traceY() {
+    return mouseY;
+}
+document.addEventListener("mousemove" , function(e) { mouseX = e.clientX; });
+document.addEventListener("mousemove" , function(e) { mouseY = e.clientY; });
+```
 
 ### サンプル問題
 
