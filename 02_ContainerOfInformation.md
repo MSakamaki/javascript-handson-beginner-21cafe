@@ -2,7 +2,13 @@
 
 ##  変数(variable)
 
+変数とは、データを記憶し、必要なときに利用するために設けられたもの
+
+何のために使うために持っている**変数**なのか？、その変数で何をしたいのか、イメージするのが重要。
+
 ### 変数の書き方
+
+#### 新しく変数を定義する場合
 
 ```javascript
 
@@ -10,6 +16,16 @@
 var [変数名] = [情報];
 
 ```
+
+#### 定義した変数に、また値を入れなおす場合
+
+```javascript
+
+
+[変数名] = [情報];
+
+```
+
 
  + 変数は「情報を格納する箱」です。
  + 変数名は「箱を一意に特定する為の名前」です。
@@ -25,8 +41,11 @@ var i;
 // 変数iに100を代入する。
 i = 100;
 
-// 次のように宣言と代入を一度に行うこともできます。
+// 次のように宣言と代入を一度に行うこともできます。(変数ｘを２００で作る)
 var x = 200;
+
+// 中身を入れ替える場合は次のようにします。(変数xの中身を３００に変える)
+x = 300;
 
 ```
 
@@ -295,6 +314,41 @@ delete obj.C;
 
 // 表示すると・・・？
 console.log(obj);
+
+```
+
+## ＪａｖａＳｃｒｉｐｔの注意しておきたいトコロ
+
+### 変数の上書き
+
+JavaScriptでは、一つの変数に様々な物を入れてしまうことができます。
+
+そのため、変数を使いまわしていると
+
+```javascript
+
+
+// 変数animalを定義
+var animal = {
+    name: "ポチ",
+    family: "Dog",
+    cry: "bow-wow"
+}
+
+// この時点ではまだ.family等が残っている。
+console.log(animal);
+console.log(animal.name);
+console.log(animal.family);
+console.log(animal.cry);
+
+console.log("Stringオブジェクトに入れ替える。");
+animal = "動物";
+
+// Stringオブジェクトに入れ替わったので、最初に定義された.familyが消えてしまっている！
+console.log(animal);
+console.log(animal.name);
+console.log(animal.family);
+console.log(animal.cry);
 
 ```
 

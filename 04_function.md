@@ -43,7 +43,7 @@ function plus(x, y) {
 
 #### 関数の使い方
 
-この関数を使う場合、以下のように呼び出します。
+この関数を使う場合、次のように呼び出します。
 
 ```javascript
 
@@ -52,11 +52,101 @@ console.log("plus()の結果は", plus(10, 20));
 
 ```
 
-#### サンプル問題
-
-+ 
+１度関数を定義しておくと、様々な場面や用途で繰り返し使うことができるようになります。
 
 
+```javascript
+
+
+console.log("  5 + 10 = ", plus(5,  10));
+console.log("  8 +  3 = ", plus(8,   3));
+console.log(" 12 + 12 = ", plus(12, 12));
+console.log("  5 +  5 = ", plus(5,   5));
+
+```
+
+### スコープ
+
+関数を使う重要な要素として、スコープがあります。
+
+#### グローバル変数とローカル変数
+
+今回説明するのはグローバル変数とローカル変数です。
+
+|名前|説明|
+|:--|:--|
+|グローバル変数|プログラム全体から参照できる|
+|ローカル変数|宣言した関数の中でのみ参照できる|
+
+特定の関数の中で変数を宣言した場合、それはローカル変数になります。
+
+グローバル変数はどこからでも見ることができますが、ローカル変数は関数の外で参照できません。
+
+```javascript 
+
+
+// グローバル変数を宣言する。
+var grbl = "Grobal";
+
+function fnc(){
+	// ローカル変数を宣言する。
+	var scope = "local";
+
+	console.log("グローバル変数を関数内で参照", grbl);
+	console.log("ローカル変数を関数内で参照",scope);
+}
+
+// 関数fnc実行
+fnc();
+
+console.log("グローバル変数を関数の外で参照", grbl);
+console.log("ローカル変数を関数の外で参照", scope);
+
+```
+
+#### ``var``の役割
+
+変数は``var``をつけなくても宣言ができます。
+
+では、今まで何故``var``を付けて変数宣言をしていたかというと、``var``を付けない場合、すべてグローバル変数で作成されてしまうためです。
+
+以下の例では、関数内で``var``を付けずに変数を宣言にしています。
+
+この変数は関数の外でも参考可能なグローバル変数で作られています。
+
+```javascript
+
+
+function fnc(){
+	// グローバル変数を宣言
+	scope = "local?";
+	console.log("変数を関数内で参照",scope);
+}
+console.log("変数を関数の外で参照",scope);
+
+
+```
+
+
+#### **注意**
+
+前の章の注意点にも書きましたが、宣言した変数は上書きができてしまいます。
+
+以下の例ように``hoge``関数を作り、その後hogeに新たな値を代入すると、文字列に変化してしまいます。
+
+```javascript
+
+
+function hoge (){
+	console.log("hoge call");
+}
+console.log(hoge());
+
+hoge = "foo";
+
+console.log(hoge());
+
+```
 
 ### サンプル問題
 
@@ -69,28 +159,51 @@ console.log("plus()の結果は", plus(10, 20));
 	<meta charset="UTF-8">
 </head>
 <body>
-    <div><input type="text" id="operand"/></div>
 	<div>
-	<button onclick="ope('+');"> + </button>
-	<button onclick="ope('-');"> - </button>
-	<button onclick="ope('×');"> × </button>
-	<button onclick="ope('÷');"> ÷ </button>
-	<button onclick="ope('=');"> = </button>
+    	<label id="calculation">&nbsp;</label>
     </div>
     <div>
-    	<label id="calculation"></label>
+		<button onclick="ope('7');"> 7 </button>
+		<button onclick="ope('8');"> 8 </button>
+		<button onclick="ope('9');"> 9 </button>
+		<button onclick="ope('÷');"> ÷ </button>
+	</div>
+	<div>
+		<button onclick="ope('4');"> 4 </button>
+		<button onclick="ope('5');"> 5 </button>
+		<button onclick="ope('6');"> 6 </button>
+		<button onclick="ope('×');"> × </button>
+	</div>
+	<div>
+		<button onclick="ope('1');"> 1 </button>
+		<button onclick="ope('2');"> 2 </button>
+		<button onclick="ope('3');"> 3 </button>
+		<button onclick="ope('-');"> － </button>
+	</div>
+	<div>
+		<button onclick="ope('0');"> 0 </button>
+		<button onclick="ope('.');"> ．</button>
+		<button onclick="ope('=');"> = </button>
+		<button onclick="ope('+');"> ＋ </button>
+		<button onclick="ope('CE');"> CE </button>
     </div>
 </body>
 <script>
 
-var operandVal = document.getElementById("operand").value;
 var calculation = document.getElementById("calculation");
 
 var ope = function(operator){
-	console.log(operandVal);
+	console.log("演算子", operator);
+	console.log("計算式", calculation.textContent);
+
+	// ここに処理を書いて計算機プログラムを完成させよう
+
+	// 結果を表示する。
+	calculation.textContent += operator;
 }
 
 </script>
 </html>
+
 
 ```
