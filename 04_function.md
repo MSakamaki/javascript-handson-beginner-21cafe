@@ -264,8 +264,10 @@ function fn_y(){
 ```javascript
 var mouseX = 0,
     mouseY = 0;
-document.addEventListener("mousemove" , function(e) { mouseX = e.clientX; });
-document.addEventListener("mousemove" , function(e) { mouseY = e.clientY; });
+document.addEventListener("mousemove" , function(e) {
+	mouseX = e.clientX;
+	mouseY = e.clientY; 
+});
 ```
 
 ``fn_x()``, ``fn_y()``を以下のように書き換えます。
