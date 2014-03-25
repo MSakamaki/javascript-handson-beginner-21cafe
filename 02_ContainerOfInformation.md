@@ -321,15 +321,6 @@ var obj = { A: "エー", B:"ビー", C:"シー" };
 
 このオブジェクトにはAと言うキーに"エー"と言う値、Bと言うキーに"ビー"と言う値、Cと言うキーに"シー"と言う値で、文字列をそれぞれ格納しています。
 
-中身をすべて見る場合は配列と同じく以下のように書きます。
-
-```javascript
-
-
-console.log(obj);
-
-```
-
 オブジェクトに格納されている、特定の値を見たい場合には以下のように書くことが出来ます。
 
 
@@ -361,7 +352,11 @@ obj.B = "ベー";
 delete obj.C;
 
 // 表示すると・・・？
-console.log(obj);
+console.log(obj.A);
+console.log(obj.B);
+console.log(obj.C);
+console.log(obj.D);
+console.log(obj.E);
 
 ```
 

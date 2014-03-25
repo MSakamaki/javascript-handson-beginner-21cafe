@@ -226,7 +226,7 @@ function tan(x) {
 }
 ```
 
-このように書き換える。
+``fn_y()``を以下のように書き換えます。
 
 ```javascript
 function fn_y(){
@@ -254,21 +254,29 @@ function fn_y(){
 	return y;
 }
 ```
+
 ##### マウスの追跡
 
-traceX()と、traceY()をfn_x(), fn_y(), x, yそれぞれと置き換えてみる。
+マウスの動きを追跡してみる。
+
+以下を追加します。
 
 ```javascript
 var mouseX = 0,
     mouseY = 0;
-function traceX() {
-    return mouseX;
-}
-function traceY() {
-    return mouseY;
-}
 document.addEventListener("mousemove" , function(e) { mouseX = e.clientX; });
 document.addEventListener("mousemove" , function(e) { mouseY = e.clientY; });
+```
+
+``fn_x()``, ``fn_y()``を以下のように書き換えます。
+
+```javascript
+function fn_x(){
+	return mouseX;
+}
+function fn_y(){
+	return mouseY;
+}
 ```
 
 ### サンプル問題
