@@ -155,6 +155,62 @@ console.log(hoge());
 
 ### サンプル問題
 
+ + Ｃａｎｖａｓで ■ を操作するプログラム。
+ + 
+ + 
+
+```html
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<canvas id="cnvs" width="140" height="140"></canvas>
+</body>
+<script>
+
+var canvas = document.getElementById("cnvs");
+var ctx = canvas.getContext('2d');
+
+var x = 10,
+    y = 10,
+    w = 10,
+    h = 10,
+    speed = 500;
+
+function fn_x(){
+	return x++;
+}
+function fn_y(){
+	return y;
+}
+function fn_w(){
+	return w;
+}
+function fn_h(){
+	return h;
+}
+
+function viewCanvas(){
+	ctx.fillStyle = '#000';
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+	ctx.fillStyle = '#fff';
+	ctx.fillRect(fn_x(), fn_y(), fn_w(), fn_h());
+	window.setTimeout("viewCanvas()", speed);
+};
+
+viewCanvas();
+
+</script>
+</html>
+
+```
+
+
+### サンプル問題
+
  + 計算機を作ってみましょう
  + +,-,×,÷と、数値を入力して、最後に＝を押すと計算結果を出すプログラムを作りましょう。
  + CEを入力すると計算中の結果も画面のクリアされます。
