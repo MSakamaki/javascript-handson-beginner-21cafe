@@ -158,6 +158,11 @@ console.log(hoge());
  + Ｃａｎｖａｓで ■ が自動的に動くプログラムです。
  + それぞれ用意した関数や変数を書き換えながら、■ を動かしてみましょう。
 
+ + 問題
+ 	+ 下方向に移動するには？
+ 	+ 斜めに移動するには？
+ 	+ 右まで行った後、元の位置に戻るには？
+
 ```html
 
 <!doctype html>
@@ -173,21 +178,25 @@ console.log(hoge());
 var canvas = document.getElementById("cnvs");
 var ctx = canvas.getContext('2d');
 
-var x = 10,
-    y = 10,
-    w = 10,
-    h = 10,
-    speed = 100;
+var x = 10, // 縦軸の初期位置
+    y = 10, // 横軸の初期位置
+    w = 10, // 四角の初期サイズ(縦)
+    h = 10, // 四角の初期サイズ(横)
+    speed = 100; // 更新スピード(値が小さいほど早い)
 
+// 横軸の位置
 function fn_x(){
 	return x++;
 }
+// 縦軸の位置
 function fn_y(){
 	return y;
 }
+// 四角のサイズ（幅）
 function fn_w(){
 	return w;
 }
+// 四角のサイズ(縦)
 function fn_h(){
 	return h;
 }
