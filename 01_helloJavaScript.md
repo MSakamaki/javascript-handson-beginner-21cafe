@@ -47,8 +47,7 @@
 ```javascript
 
 
-document.body.innerText = "Hello JavaScript";
-
+document.write("Hello JavaScript");
 
 ```
 

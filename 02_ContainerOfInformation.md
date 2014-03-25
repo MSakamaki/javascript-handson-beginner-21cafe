@@ -53,7 +53,7 @@ x = 300;
 
 変数の中身を表示してみましょう。
 
-以下のケースは``console.log()``、``alert()``、``document.body.innerText``を使って変数の中身を表示しています。
+以下のケースは``console.log()``、``alert()``、``document.write()``を使って変数の中身を表示しています。
 
 #### 例
 
@@ -64,7 +64,7 @@ x = 300;
 var message = "hello world !";
 
 // ブラウザ上に表示する。
-document.body.innerText = message;
+document.write(message);
 
 // アラートに表示する。
 alert(message);
@@ -176,15 +176,70 @@ var length = 80;
 // 計算を行います。
 var answer = height * width * length;
 
-document.body.innerText
- = "立方体の面積は高さ×幅×奥行きで求めます。"
+document.write(
+   "立方体の面積は高さ×幅×奥行きで求めます。"
  + "高さは" + height
  + "、幅は" + width
  + "、奥行きは" + length
  + "、計算式は" + height + "×" + width + "*" + length + "で、結果は"
- + answer + "です。";
+ + answer + "です。");
 
 ```
+
+### キャスト(型の変換)
+
+プロンプト（ポップアップ）の入力を使い、計算をしてみましょう。
+
+```javascript
+
+
+var i = window.prompt("数を入力してください、５を足します。");
+
+console.log("そのまま＋すると...", i + 5 );
+
+```
+
+５を入力してみると、``5+5=10``を予想していましたが、５５になってしまいました。
+
+これは、プロンプトの入力値が文字列であるため、５＋５が文字列の結合扱いになり、５５になってしまっているのです。
+
+そういった場合はキャストにより型を変換します。
+
+#### キャストの方法
+
+
+|変換先|構文|
+|:---|:---|
+|数値(Number)|``Number(値)``|
+|文字列(String)|``String(値)``|
+|論理型(Boolean)|``Boolean(値)``|
+
+#### サンプルコード
+
+```javascript
+
+
+var num = 100;
+var str = "char";
+var bool = true;
+
+// 数値に変換
+console.log("String -> Number", Number(str));
+console.log("Boolean -> Number", Number(bool));
+
+// 文字列に変換
+console.log("Number -> String", String(num));
+console.log("Boolean -> String", String(bool));
+
+// 論理値に変換
+console.log("Number -> Boolean", Boolean(num));
+console.log("String -> Boolean", Boolean(str));
+
+```
+
+#### [サンプル問題]プロンプトからの計算やりなおし
+
+上記を踏まえて、プロンプトの入力から計算ができるよう、最初の処理を書き直してみましょう。
 
 ## 配列とObject
 
@@ -207,18 +262,7 @@ var ary = ["A","B","C"];
 
 この配列は、文字列AとBとCを順番に格納しています。
 
-中身を見る場合、以下のように書いてみましょう。
-
-配列の中身がすべて見えるはずです。
-
-```javascript
-
-
-console.log(ary);
-
-```
-
-配列に格納されている特定の値だけを見たい場合は、次のように``変数名[見たい位置]``のように書きます。
+配列に格納されている特定の値を見たい場合は、次のように``変数名[見たい位置]``のように書きます。
 
 ```javascript
 
@@ -253,7 +297,11 @@ ary[1] = 'K';
 ary.splice(2,1);
 
 // 表示すると・・・？
-console.log(ary);
+console.log("配列の1番目は", ary[0]);
+console.log("配列の2番目は", ary[1]);
+console.log("配列の3番目は", ary[2]);
+console.log("配列の4番目は", ary[3]);
+console.log("配列の5番目は", ary[4]);
 
 ```
 

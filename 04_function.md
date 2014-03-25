@@ -122,6 +122,9 @@ function fnc(){
 	scope = "local?";
 	console.log("変数を関数内で参照",scope);
 }
+// 関数fnc実行
+func();
+
 console.log("変数を関数の外で参照",scope);
 
 
@@ -149,6 +152,8 @@ console.log(hoge());
 ```
 
 ### サンプル問題
+
+素数の数
 
 ```html
 
