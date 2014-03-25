@@ -242,10 +242,12 @@ function fn_y(){
 }
 ```
 
-##### Ｕターンをしてみる。
+##### Ｕターンをしてみる。（関数の差し替え）
+
+次の２つの関数を追加します。
 
 ```javascript
-function fn_x(){
+function fn_x_uturn(){
 	if (y >= 120 ) {
 		return x--;
 	}else if ( x >= 120 ) {
@@ -253,7 +255,7 @@ function fn_x(){
 	}
 	return x++;
 }
-function fn_y(){
+function fn_y_uturn(){
 	if ( y >= 120 ) {
 		return y;
 	} else if ( x >= 120 ) {
@@ -261,6 +263,14 @@ function fn_y(){
 	}
 	return y;
 }
+```
+
+``ctx.fillRect()``で呼び出されている関数``fn_x()``, ``fn_y()``を新しく作った``fn_x_uturn()``, ``fn_y_uturn()``に置き換えてみましょう。
+
+```javascript
+ctx.fillRect(fn_x(), fn_y(), fn_w(), fn_h());
+	↓
+ctx.fillRect(fn_x_uturn(), fn_y_uturn(), fn_w(), fn_h());
 ```
 
 ##### マウスの追跡
